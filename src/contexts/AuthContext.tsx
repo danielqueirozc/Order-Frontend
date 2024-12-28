@@ -7,13 +7,11 @@ interface User {
 
 interface ChildrenProps {
     children: React.ReactNode;
-
 }
 
 interface AuthProviderProps {
     user: User | null;
     token: string | null
-    // login: (username: string, password: string) => Promise<void>;
     login: (newToken: string) => void;
     logout: () => void;
 }
