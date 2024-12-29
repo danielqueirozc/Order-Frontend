@@ -30,7 +30,7 @@ export const Orders = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-zinc-100">
       <h1 className="text-2xl font-bold mb-6">Your Orders</h1>
       <div className="grid gap-6">
         {orders.map((order) => (

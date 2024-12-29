@@ -1,5 +1,5 @@
 import { Login } from "./components/login";
-import { Orders } from "./components/orders";
+import { Products } from "./components/products";
 import { Register } from "./components/resgister";
 
 import { AuthProvider ,useAuth } from "./contexts/AuthContext";
@@ -11,17 +11,16 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
 };
 
 export function App() {
-
   return (
     <AuthProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route 
-          path="/orders" 
+          path="/products" 
           element = {
             <PrivateRoute>
-              <Orders />
+              <Products />
             </PrivateRoute>
           } 
         />

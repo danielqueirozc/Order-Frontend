@@ -3,9 +3,6 @@ import { useAuth } from "../contexts/AuthContext";
 import { useState } from "react";
 import { authService } from "../services/api";
 
-interface LoginResponse {
-    token: string
-}
 
 export function Login() {
     const navigate = useNavigate()
@@ -25,7 +22,7 @@ export function Login() {
         
         login(response.token)
 
-        navigate('/orders')
+        navigate('/products')
 
         } catch (err: any) {
             setError(err.response?.data?.error || 'Failed to login');
@@ -57,9 +54,9 @@ export function Login() {
                             placeholder="Username"
                         />
                         <input className="w-full bg-transparent px-4 py-2 text-zinc-50" 
-                            name="username" 
+                            name="password" 
                             required 
-                            type="text"
+                            type="password"
                             placeholder="Password"
                         />
                     </div>
